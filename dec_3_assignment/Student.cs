@@ -12,7 +12,7 @@ namespace dec_3_assignment
         public static string Course => course;
 
         static readonly string course;
-        public Student() { }//Default Constructor
+        public Student() {}//Default Constructor
         public Student(int age, string name, Gender sex)// parameterized constructor + call by value
         {
             if (name is null)
@@ -24,7 +24,7 @@ namespace dec_3_assignment
                 Name = name;
                 Age = age;
                 Sex = sex;
-
+                Counter.IncrementCount();
             }
         }
         public Student(Student Stud)//Copy Constructor + call by reference
@@ -32,7 +32,7 @@ namespace dec_3_assignment
             Name = Stud.Name;
             Age = Stud.Age;
             Sex = Stud.Sex;
-            _ = Counter.IncrementCount();
+            
         }
         static Student()
         {
@@ -43,19 +43,21 @@ namespace dec_3_assignment
 
 class Counter
 {
-    private Counter() { }
+    
+    public Counter() { }
 
     public static int currentCount; //static member
 
     public static int IncrementCount()
     {
+
         return ++currentCount;
     }
     object CounterObject = currentCount;//boxing
     public void TotalSTudents()
-        {
+    {
         Console.WriteLine("total students are :{0}", CounterObject);
-        }
+    }
     public void ExapleOfUnboxing()
     {
         int objToInt = (int)CounterObject;//unboxing
