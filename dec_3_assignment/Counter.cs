@@ -2,7 +2,6 @@
 
 class Counter
 {
-    
     public Counter() { }
 
     public static int currentCount; //static member
@@ -12,11 +11,14 @@ class Counter
 
         return ++currentCount;
     }
+
     object CounterObject = currentCount;//boxing
+
     public void TotalSTudents()
     {
         Console.WriteLine("total students are :{0}", CounterObject);
     }
+
     public void ExapleOfUnboxing()
     {
         int objToInt = (int)CounterObject;//unboxing

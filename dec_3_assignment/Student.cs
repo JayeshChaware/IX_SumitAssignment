@@ -34,8 +34,7 @@ namespace dec_3_assignment
         {
             Name = Stud.Name;
             Age = Stud.Age;
-            Sex = Stud.Sex;
-            
+            Sex = Stud.Sex;  
         }
 
         static Student()
@@ -47,18 +46,5 @@ namespace dec_3_assignment
         {
             Console.WriteLine("Student Name:{0} \nClass:{1}\nAge:{2}\nGender:{3}",Name,Course,Age,Sex);
         }
-    }
-}
-public static class StringHelper
-{
-    public static string ChangeFirstChase(this string inputString)
-    {
-        if (inputString.Length > 0)
-        {
-            char[] charArray = inputString.ToCharArray();
-            charArray[0] = char.IsUpper(charArray[0]) ? char.ToLower(charArray[0]) : char.ToUpper(charArray[0]);
-            return new string(charArray);
-        }
-        return inputString;
     }
 }
