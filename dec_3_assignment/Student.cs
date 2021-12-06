@@ -11,7 +11,7 @@ namespace dec_3_assignment
 
         public static string Course => course;
 
-        static readonly string course;
+        static readonly string course; // ask this...
         public Student() {}//Default Constructor
         public Student(int age, string name, Gender sex)// parameterized constructor + call by value
         {
@@ -38,29 +38,22 @@ namespace dec_3_assignment
         {
             course = "MCA";
         }
+        public void ViewStudent()
+        {
+            Console.WriteLine("Student Name:{0} \nClass:{1}\nAge:{2}\nGender:{3}",Name,Course,Age,Sex);
+        }
     }
 }
-
-class Counter
+public static class StringHelper
 {
-    
-    public Counter() { }
-
-    public static int currentCount; //static member
-
-    public static int IncrementCount()
+    public static string ChangeFirstChase(this string inputString)
     {
-
-        return ++currentCount;
-    }
-    object CounterObject = currentCount;//boxing
-    public void TotalSTudents()
-    {
-        Console.WriteLine("total students are :{0}", CounterObject);
-    }
-    public void ExapleOfUnboxing()
-    {
-        int objToInt = (int)CounterObject;//unboxing
-        Console.WriteLine("object to int conversion demo:{0}", objToInt);
+        if (inputString.Length > 0)
+        {
+            char[] charArray = inputString.ToCharArray();
+            charArray[0] = char.IsUpper(charArray[0]) ? char.ToLower(charArray[0]) : char.ToUpper(charArray[0]);
+            return new string(charArray);
+        }
+        return inputString;
     }
 }

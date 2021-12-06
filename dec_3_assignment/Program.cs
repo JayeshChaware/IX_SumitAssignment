@@ -6,7 +6,7 @@ namespace dec_3_assignment
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
             Student Student1 = new Student()
             {
                 Name = "Raj Chopra",
@@ -18,6 +18,9 @@ namespace dec_3_assignment
             Counter Count = new Counter();
             Count.TotalSTudents();
             Count.ExapleOfUnboxing();
+            Student1.ViewStudent();
+            Student2.ViewStudent();
+            Student3.ViewStudent();
 
         }
     }
