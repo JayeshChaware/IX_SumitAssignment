@@ -12,7 +12,9 @@ namespace dec_3_assignment
         public static string Course => course;
 
         static readonly string course; // ask this...
+
         public Student() {}//Default Constructor
+
         public Student(int age, string name, Gender sex)// parameterized constructor + call by value
         {
             if (name is null)
@@ -27,6 +29,7 @@ namespace dec_3_assignment
                 Counter.IncrementCount();
             }
         }
+
         public Student(Student Stud)//Copy Constructor + call by reference
         {
             Name = Stud.Name;
@@ -34,10 +37,12 @@ namespace dec_3_assignment
             Sex = Stud.Sex;
             
         }
+
         static Student()
         {
             course = "MCA";
         }
+
         public void ViewStudent()
         {
             Console.WriteLine("Student Name:{0} \nClass:{1}\nAge:{2}\nGender:{3}",Name,Course,Age,Sex);
