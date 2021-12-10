@@ -44,7 +44,7 @@ namespace dec_3_assignment
 
         public void ViewStudent()
         {
-            Console.WriteLine("Student Name:{0} \nClass:{1}\nAge:{2}\nGender:{3}",Name,Course,Age,Sex);
+            Console.WriteLine("Student Name:{0} \nClass:{1}\nAge:{2}\nGender:{3}",Name.ChangeFirstChase(),Course,Age,Sex);//extending String class execution
         }
     }
 }

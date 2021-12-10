@@ -1,6 +1,6 @@
 ﻿public static class StringHelper
 {
-    public static string ChangeFirstChase(this string inputString)
+    public static string ChangeFirstChase(this string inputString)//extending string class
     {
         if (inputString.Length > 0)
         {
