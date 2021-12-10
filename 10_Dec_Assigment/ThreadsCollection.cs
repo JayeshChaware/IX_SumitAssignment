@@ -4,20 +4,20 @@ namespace _10_Dec_Assigment
 {
     public class ThreadsCollection
     {
-        public void GetEven()
+        public void GetEven()//to calculate even number
         {
             for (int number = 1; number < 1000; number++)
             {
                 if (number % 2 == 0)
                 { 
                     Console.Write("e:{0}\t", number);
-                    Thread.Sleep(10);
+                    Thread.Sleep(3000);
                 }
             }
 
             
         }
-        public void GetPalindrome()
+        public void GetPalindrome()//to calculate palindrome number
         {
             for (int number = 1; number < 1000; number++)
             {
@@ -31,7 +31,7 @@ namespace _10_Dec_Assigment
                 if (reverse == number)
                 {
                     Console.Write("p:{0}\t",number);
-                    Thread.Sleep(10);
+                    Thread.Sleep(3000);
 
                 }
             }
